@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run generate
+artifacts:
+  base-directory: .output/public
+  files:
+    - "**/*"
+cache:
+  paths:
+    - node_modules/**/*
