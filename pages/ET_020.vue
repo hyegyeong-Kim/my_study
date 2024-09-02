@@ -3,7 +3,7 @@
 <template>
   <div class="page-layout">
     <div class="title-box">
-      <h2 class="title">개인정보 유지 동의 완료</h2>
+      <h2 class="title">개인정보 유지 동의 완료tttt</h2>
     </div>
     <div class="form-wrap narrow no-border">
       <article>
