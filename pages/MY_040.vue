@@ -32,6 +32,7 @@
               <span class="context">veryverylongemailaddressmySU**@sk.com</span>
             </div>
             <div class="suffix">관계 : 배우자</div>
+              <div class="suffix">관계 : 배우자22</div>
           </div>
         </div>
       </article>
