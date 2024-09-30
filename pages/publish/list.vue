@@ -1187,6 +1187,19 @@ const tableData: User[] = [
     modal: false,
     etc: ""
   },
+    {
+    depth1: "",
+    depth2: "마이써니구성원 등록/조회",
+    depth3: "",
+    depth4: "",
+    title: "마이써니구성원 등록/조회",
+    id: "AME_0A1",
+    link: "admin/AME_0A0",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
 
   // 권한 (어드민)
   {
