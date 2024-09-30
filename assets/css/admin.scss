@@ -621,6 +621,9 @@ a {
     justify-content: space-between;
     & table {
       flex: 1;
+      &.f0{
+        flex: inherit;
+      }
       & th,
       & td {
         height: 45px;
@@ -703,7 +706,7 @@ a {
     align-items: center;
     gap: 5px;
     background: #fff;
-    & input[type="text"], & input[type="number"] {
+    & input[type="text"], & input[type="number"], & input[type="email"] {
       width: 100%;
       height: 35px;
       min-height: auto;
@@ -945,6 +948,7 @@ a {
     & table {
       width: 100%;
       margin-bottom: 20px;
+     
       & thead {
         & th {
           padding: 8px 5px;
@@ -989,6 +993,7 @@ a {
           justify-content: center;
         }
       }
+   
     }
     &.align-left {
       & thead th,

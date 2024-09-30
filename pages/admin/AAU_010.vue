@@ -2,7 +2,19 @@
 definePageMeta({
   layout: "admin"
 });
-
+//openmodal
+function openModal(id, _type) {/* Edit 23-10-19 넓이에 따른 클래스 추가 : 1200 = wide */
+  document.getElementById(id).classList.add("active");
+  if(_type){
+    document.getElementById(id).children[0].classList.add(_type);
+  }
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove("active");
+}
+function closeModalOverlay(e) {
+  e.target.classList.remove("active");
+}
 /* admin table th에 들어가는 툴팁 기능 */
 function onToggleTooltip(event) {
   event.currentTarget.classList.toggle("active");
@@ -317,9 +329,72 @@ function onCloseTooltip(event) {
         </div>
 
         <div class="box-buttons align-right">
+         <button type="button" @click="openModal('modal-03','wide')">보기</button>
           <button type="button" class="prime solid">저장</button>
         </div>
       </div>
     </div>
+    <!-- 모달페이지 -->
+    <ClientOnly>
+       <Teleport to="#admin-container">
+                <div id="modal-03" class="modal-overlay" @click="closeModalOverlay($event)">
+          <div class="modal-container" @click.stop>
+            <div class="header">
+              <strong class="title">이용약관 조회</strong>
+              <button type="button" class="button" @click.prevent="closeModal('modal-03')">닫기</button>
+            </div>
+            <div class="content">
+              <!-- 그리드제목 -->
+              <div class="area-title">
+                <div class="count">총 <span>12</span>건</div>
+              </div>
+
+              <!-- 그리드 -->
+              <div class="area-result">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>
+                        <span class="el-checkbox">
+                          <input id="checkboxGridAll" type="checkbox" name="checkboxGridName" />
+                          <label for="checkboxGridAll"></label>
+                        </span>
+                      </th>
+                      <th>서비스명</th>
+                      <th>약관코드</th>
+                      <th>약관명</th>
+                      <th>필수 여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="el-checkbox">
+                          <input id="checkboxGrid01" type="checkbox" name="checkboxGridName" />
+                          <label for="checkboxGrid01"></label>
+                        </span>
+                      </td>
+                      <td>mySUNI</td>
+                      <td>COMMON_TERM</td>
+                      <td>mySUNI 통합약관</td>
+                      <td>필수</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="footer">
+              <!-- 버튼영역 -->
+              <div class="box-buttons">
+                <button type="button" class="">취소</button>
+                <button type="button" class="prime solid">등록</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       </Teleport>
+    </ClientOnly>
+
   </div>
+  
 </template>

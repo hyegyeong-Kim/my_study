@@ -282,7 +282,8 @@ input {
   &[type="tel"],
   &[type="password"],
   &[type="number"],
-  &[type="mail"] {
+  &[type="mail"],
+  &[type="email"] {
     min-height: 53px;
     border: 0;
   }
@@ -2084,6 +2085,15 @@ iframe.terms-box {
   align-items: center;
   gap: 5px;
 
+  &.calendar-small{
+    label{
+      width: 150px;
+      input{
+        height: 35px;
+        min-height: auto;
+      }
+    }
+  }
   label {
     position: relative;
     display: inline-block;
