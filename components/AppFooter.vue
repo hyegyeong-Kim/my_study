@@ -9,6 +9,10 @@
       <li>
         <a href="#none">개인정보처리방침</a>
       </li>
+      <!-- 쿠키 -->
+      <li>
+        <a href="#none">필수 쿠키</a>
+      </li>
       <li>
         <a href="#none">이용약관</a>
       </li>
