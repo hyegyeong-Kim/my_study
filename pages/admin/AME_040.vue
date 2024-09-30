@@ -8,7 +8,7 @@ definePageMeta({
   <div class="content">
     <!-- 검색조건 -->
     <div class="area-contition">
-      <table>
+      <table class="f0">
         <!-- Add 23-10-19 -->
         <colgroup>
           <col width="85px" />
@@ -31,6 +31,18 @@ definePageMeta({
                   </select>
                 </label>
             </td>
+              <th>탈퇴일자</th>
+            <td>
+               <div class="term-calendar calendar-small">
+            <label for="termStart">
+              <input id="termStart" type="text" value="0000.00.00" />
+            </label>
+            <span>~</span>
+            <label for="termEnd">
+              <input id="termEnd" type="text" value="0000.00.00" />
+            </label>
+          </div>
+            </td>
           </tr>
             <tr>
               <th>조회조건</th>
@@ -47,6 +59,14 @@ definePageMeta({
                 <label class="input-wrap">
                   <input type="text" value="" />
                   <button type="button" class="icon del">삭제</button>
+                </label>
+              </td>
+            </tr>
+               <tr>
+              <th>E-mail ID</th>
+              <td>
+                <label class="input-wrap" for="email">
+                 <input type="email" id="email" name="email" required>
                 </label>
               </td>
             </tr>
