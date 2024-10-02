@@ -1767,6 +1767,19 @@ const tableData: User[] = [
   },
   {
     depth1: "",
+    depth2: "SK mySUNI 서비스 이용약관_글로벌컬리지_영문",
+    depth3: "",
+    depth4: "",
+    title: "약관 HTML",
+    id: "SUNI-ID/이용약관/SK_SERVICE_TERMS_EN.html",
+    link: "terms/SUNI-ID/이용약관/SK_SERVICE_TERMS_EN.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "",
     depth2: "mySUNI ID 이용을 위한 개인정보 수집∙이용 동의",
     depth3: "",
     depth4: "",
@@ -1804,7 +1817,7 @@ const tableData: User[] = [
     modal: false,
     etc: ""
   },
-  
+
   {
     depth1: "",
     depth2: "이천포럼 이용을 위한 개인정보 수집∙이용 동의",
@@ -1852,6 +1865,19 @@ const tableData: User[] = [
     title: "약관 HTML",
     id: "SUNI-ID/이용약관/SERVICE_TERMS_231214.html",
     link: "terms/SUNI-ID/이용약관/SERVICE_TERMS_231214.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "",
+    depth2: "SK mySUNI 서비스 이용약관_글로벌컬리지_영문",
+    depth3: "",
+    depth4: "",
+    title: "약관 HTML",
+    id: "SUNI-ID/이용약관/SK_SERVICE_TERMS_EN.html",
+    link: "terms/SUNI-ID/이용약관/SK_SERVICE_TERMS_EN.html",
     complete: true,
     outlink: false,
     modal: false,
