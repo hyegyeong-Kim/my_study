@@ -1804,7 +1804,7 @@ const tableData: User[] = [
     modal: false,
     etc: ""
   },
-  
+
   {
     depth1: "",
     depth2: "이천포럼 이용을 위한 개인정보 수집∙이용 동의",
@@ -2047,6 +2047,58 @@ const tableData: User[] = [
     title: "Preloader",
     id: "preloader",
     link: "preloader.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "쿠키",
+    depth2: "",
+    depth3: "",
+    depth4: "",
+    title: "쿠키 사용 동의",
+    id: "Cookie_KR.html",
+    link: "terms/Cookie/Cookie_KR.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "",
+    depth2: "",
+    depth3: "",
+    depth4: "",
+    title: "Cookie Consent Notice",
+    id: "Cookie_EN.html",
+    link: "terms/Cookie/Cookie_EN.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "",
+    depth2: "",
+    depth3: "",
+    depth4: "",
+    title: "필수 쿠키",
+    id: "Cookie_Policy_KR.html",
+    link: "terms/Cookie/Cookie_Policy_KR.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "",
+    depth2: "",
+    depth3: "",
+    depth4: "",
+    title: "Necessary Cookies",
+    id: "Cookie_Policy_EN.html",
+    link: "terms/Cookie/Cookie_Policy_EN.html",
     complete: true,
     outlink: false,
     modal: false,

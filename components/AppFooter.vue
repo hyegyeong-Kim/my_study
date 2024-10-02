@@ -11,7 +11,7 @@
       </li>
       <!-- 쿠키 -->
       <li>
-        <a href="#none">필수 쿠키</a>
+        <a href="#none">필수 정책</a>
       </li>
       <li>
         <a href="#none">이용약관</a>
