@@ -44,7 +44,7 @@ function onCloseTooltip(event) {
             <td>
               <label class="input-wrap">
                 <input type="text" value="" />
-                <button type="button" class="icon del">삭제</button>
+                <button type="button" class="icon del">삭제q</button>
                 <button type="button" class="icon sch">검색</button>
               </label>
             </td>
