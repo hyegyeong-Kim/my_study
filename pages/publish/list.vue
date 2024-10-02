@@ -1804,7 +1804,7 @@ const tableData: User[] = [
     modal: false,
     etc: ""
   },
-  
+
   {
     depth1: "",
     depth2: "이천포럼 이용을 위한 개인정보 수집∙이용 동의",
@@ -2034,6 +2034,45 @@ const tableData: User[] = [
     title: "Playground 이용을 위한 개인정보 수집∙이용 동의",
     id: "Playground/개인정보수집/SK_PRIVACY_STATEMENT_PLAYGROUND_20240619.html",
     link: "terms/Playground/개인정보수집/SK_PRIVACY_STATEMENT_PLAYGROUND_20240619.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "E-mail 초대 약관",
+    depth2: "",
+    depth3: "",
+    depth4: "",
+    title: "개인정보 수집이용 동의_mySUNI ID_KR",
+    id: "E-mail_초대/개인정보 수집이용 동의_mySUNI ID_KR.html",
+    link: "terms/E-mail/e-mail_invitation_KR.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "",
+    depth2: "",
+    depth3: "",
+    depth4: "",
+    title: "개인정보 수집이용 동의_mySUNI ID_EN",
+    id: "E-mail_초대/개인정보 수집이용 동의_mySUNI ID_KR.html",
+    link: "terms/E-mail/e-mail_invitation_EN.html",
+    complete: true,
+    outlink: false,
+    modal: false,
+    etc: ""
+  },
+  {
+    depth1: "",
+    depth2: "",
+    depth3: "",
+    depth4: "",
+    title: "개인정보 수집이용 동의_mySUNI ID_ZH",
+    id: "E-mail_초대/개인정보 수집이용 동의_mySUNI ID_KR.html",
+    link: "terms/E-mail/e-mail_invitation_ZH.html",
     complete: true,
     outlink: false,
     modal: false,
