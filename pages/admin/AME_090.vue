@@ -2,6 +2,27 @@
 definePageMeta({
   layout: "admin"
 });
+
+// 이메일 모달 서비스명과 유효기간
+const serviceName = "mySUN"; // 서비스명
+const expirationDate = "2024-06-13"; // 유효기간
+const companyName = "SK 하이닉스"; // 회사이름
+const companyNameEn = "SK Hynix"; // 회사이름
+const companyNameZh = "SK 海力士"; // 회사이름
+
+function openModal(id, _type) {
+  /* Edit 23-10-19 넓이에 따른 클래스 추가 : 1200 = wide */
+  document.getElementById(id).classList.add("active");
+  if (_type) {
+    document.getElementById(id).children[0].classList.add(_type);
+  }
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove("active");
+}
+function closeModalOverlay(e) {
+  e.target.classList.remove("active");
+}
 </script>
 
 <template>
@@ -19,7 +40,8 @@ definePageMeta({
           <col width="" />
         </colgroup>
         <!-- //Add 23-10-19 -->
-        <tbody><!-- Add 23-10-19 tbody -->
+        <tbody>
+          <!-- Add 23-10-19 tbody -->
           <tr>
             <th>검색</th>
             <td>
@@ -93,7 +115,8 @@ definePageMeta({
               </span>
             </td>
           </tr>
-        </tbody><!-- Add 23-10-19 tbody -->
+        </tbody>
+        <!-- Add 23-10-19 tbody -->
       </table>
       <button type="submit" class="submit">조회</button>
     </div>
@@ -103,7 +126,10 @@ definePageMeta({
       <h3 class="h3">회원 목록</h3>
       <div class="count">총 <span>12</span>건</div>
       <div class="buttons">
-        <button type="button" class="point dnld">엑셀 다운로드</button>
+        <button type="button" @click="openModal('email_ko')">E-mail 초대_국문</button>
+        <button type="button" @click="openModal('email_en')">E-mail 초대_영문</button>
+        <button type="button" @click="openModal('email_zh')">E-mail 초대_중문</button>
+        <button type="button">엑셀 다운로드</button>
         <label class="select-wrap">
           <select>
             <option value="">10개씩 보기</option>
@@ -191,4 +217,197 @@ definePageMeta({
       <!-- Delete 23-10-19 페이징 삭제 -->
     </div>
   </div>
+
+  <!-- 메일 모달 -->
+  <ClientOnly>
+    <Teleport to="#admin-container">
+      <div id="email_ko" class="modal-overlay" @click="closeModalOverlay($event)">
+        <div class="modal-container" @click.stop>
+          <div class="header columns">
+            <div class="title">
+              <h1 class="modal_logo">SUNI</h1>
+              {{ serviceName }} 회원 가입 안내 <span class="expiration_date">({{ expirationDate }} 유효기간 만료)</span>
+            </div>
+            <button type="button" class="button" @click.prevent="closeModal('email_ko')">닫기</button>
+          </div>
+          <div class="content email-content">
+            <!-- <h1 class="modal_logo">SUNI</h1>
+            <h3 class="email_title">
+              {{ serviceName }} 회원 가입 안내 <span class="expiration_date">({{ expirationDate }}유효기간 만료)</span>
+            </h3> -->
+            <p class="email_description">
+              <span>안녕하세요.</span>
+              <strong> {{ serviceName }}</strong> 회원으로 귀하를 초대합니다. <br />
+              아래 링크를 통해 회원으로 가입하세요
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">초대 정보 안내</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>서비스</th>
+                  <td>{{ serviceName }}</td>
+                </tr>
+                <tr>
+                  <th>회사명</th>
+                  <td>{{ companyName }}</td>
+                </tr>
+                <tr>
+                  <th>유효기간</th>
+                  <td>
+                    <strong>{{ expirationDate }}</strong> 까지
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="emil_notes">
+              <h4>유의사항</h4>
+              <ul>
+                <li>- 초대자 본인 전용 회원 가입 링크입니다.</li>
+                <li>- 타인에게 알려 주시는 경우 회원가입이 제한될 수 있으니 유의하시기 바랍니다.</li>
+                <li>- 이 링크는 7일간 유효하며, 기간 경과 후 가입이 불가합니다.</li>
+                <li>- 회사명이 본인 소속과 일치하지 않는 경우 Help Desk로 문의 바랍니다.</li>
+              </ul>
+            </div>
+            <button type="button" class="common-buttons point">
+              <strong>{{ serviceName }}</strong
+              >&nbsp;회원가입
+            </button>
+            <div class="email_footer">
+              <ul>
+                <li>※ 본 메일은 발신전용 메일로 회신이 불가능합니다.</li>
+                <li>※ 문의사항은 Help Desk(1599-7535)로 문의 바랍니다.</li>
+              </ul>
+              <p class="copyright">&copy; mySUNI. ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="email_en" class="modal-overlay" @click="closeModalOverlay($event)">
+        <div class="modal-container" @click.stop>
+          <div class="header columns">
+            <div class="title">
+              <h1 class="modal_logo">SUNI</h1>
+              {{ serviceName }} Membership Invitation <span class="expiration_date">({{ expirationDate }} Expires on)</span>
+            </div>
+            <button type="button" class="button" @click.prevent="closeModal('email_en')">닫기</button>
+          </div>
+          <div class="content email-content">
+            <!-- <h1 class="modal_logo">SUNI</h1>
+            <h3 class="email_title">
+              {{ serviceName }} 회원 가입 안내 <span class="expiration_date">({{ expirationDate }}유효기간 만료)</span>
+            </h3> -->
+            <p class="email_description">
+              <span>Hello,</span>
+              We are inviting you to become a member of <strong> {{ serviceName }}.</strong><br />
+              Please sign up through the link below.
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Invitation Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Service</th>
+                  <td>{{ serviceName }}</td>
+                </tr>
+                <tr>
+                  <th>Company Name</th>
+                  <td>{{ companyNameEn }}</td>
+                </tr>
+                <tr>
+                  <th>Validity Period</th>
+                  <td>
+                    Until <strong>{{ expirationDate }}</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="emil_notes">
+              <h4>Notes</h4>
+              <ul>
+                <li>&middot; This membership registration link is exclusively for you.</li>
+                <li>&middot; Please be aware that sharing it with others may restrict your ability to register.</li>
+                <li>&middot; This link is valid for 7 days, and you cannot sign up after it expires.</li>
+                <li>&middot; If the company name does not match your affiliation, please contact the Help Desk.</li>
+              </ul>
+            </div>
+            <button type="button" class="common-buttons point">Register</button>
+            <div class="email_footer">
+              <ul>
+                <li>&middot; Legal Notice: This email was sent from a dedicated outbound email address that cannot receive replies.</li>
+              </ul>
+              <p class="copyright">&copy; mySUNI. ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="email_zh" class="modal-overlay" @click="closeModalOverlay($event)">
+        <div class="modal-container" @click.stop>
+          <div class="header columns">
+            <div class="title">
+              <h1 class="modal_logo">SUNI</h1>
+              {{ serviceName }} 加入通知 <span class="expiration_date">(有效期至 {{ expirationDate }})</span>
+            </div>
+            <button type="button" class="button" @click.prevent="closeModal('email_zh')">닫기</button>
+          </div>
+          <div class="content email-content">
+            <!-- <h1 class="modal_logo">SUNI</h1>
+            <h3 class="email_title">
+              {{ serviceName }} 회원 가입 안내 <span class="expiration_date">({{ expirationDate }}유효기간 만료)</span>
+            </h3> -->
+            <p class="email_description">
+              <span>尊敬的用户： </span>
+              我们诚挚邀请您成为 <strong> {{ serviceName }}.</strong> 的会员<br />
+              请通过以下链接注册成为会员。
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">邀请信息</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>服务</th>
+                  <td>{{ serviceName }}</td>
+                </tr>
+                <tr>
+                  <th>公司名称</th>
+                  <td>{{ companyNameZh }}</td>
+                </tr>
+                <tr>
+                  <th>有效期</th>
+                  <td>
+                    截止至 &nbsp;<strong>{{ expirationDate }}</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="emil_notes">
+              <h4>注意事项</h4>
+              <ul>
+                <li>&middot; 此邀请链接仅限您本人使用。</li>
+                <li>&middot; 请注意，若将此链接告知他人，可能会限制您的注册资格。</li>
+                <li>&middot; 此链接的有效期为7天，过期后将无法注册。</li>
+                <li>&middot; 如果公司名称与您的所属不符，请联系获得帮助。</li>
+              </ul>
+            </div>
+            <button type="button" class="common-buttons point">注册 {{ serviceName }} 会员</button>
+            <div class="email_footer">
+              <ul>
+                <li>※ 法律声明：本邮件由专用发件邮箱发送，无法接收回复。</li>
+              </ul>
+              <p class="copyright">&copy; mySUNI. ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Teleport>
+  </ClientOnly>
 </template>
