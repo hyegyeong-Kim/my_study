@@ -4,7 +4,7 @@
   <div class="page-layout">
     <div class="title-box">
       <h2 class="title">mySUNI 회원가입</h2>
-      <p class="paragraph">아래항목에 동의해 주세요.</p><!-- 24.06.27 Edit -->
+      <!-- <p class="paragraph">아래항목에 동의해 주세요.</p> -->
     </div>
 
     <!-- 2단계 케이스 -->
@@ -40,7 +40,7 @@
               :name="''"
               :label="['mySUNI 통합 ID 이용약관 동의(필수)']"
               :checked="[false]"
-              :disabled="false"
+              :disabled="true"
             />
             <a href="" class="link-new-page">새창열기</a>
           </div>
