@@ -25,7 +25,8 @@ definePageMeta({
             <col width="500px" />
           </colgroup>
           <!-- //Add 23-10-19 -->
-          <tbody><!-- Add 23-10-19 tbody -->
+          <tbody>
+            <!-- Add 23-10-19 tbody -->
             <tr>
               <th>검색</th>
               <td>
@@ -91,7 +92,8 @@ definePageMeta({
               </td>
               <th rowspan="2">선택 약관 동의 여부</th>
               <td rowspan="3">
-                <label class="input-textarea" style="width:90%;"><!-- Edit 23-10-19 특정 사이즈 지정 직접 넓이 선언 -->
+                <label class="input-textarea" style="width: 90%"
+                  ><!-- Edit 23-10-19 특정 사이즈 지정 직접 넓이 선언 -->
                   <textarea></textarea>
                 </label>
                 <button type="button" class="icon sch">검색</button>
@@ -127,7 +129,8 @@ definePageMeta({
                 </label>
               </td>
             </tr>
-          </tbody><!-- Add 23-10-19 tbody -->
+          </tbody>
+          <!-- Add 23-10-19 tbody -->
         </table>
         <button type="submit" class="submit">조회</button>
       </div>
@@ -227,7 +230,7 @@ definePageMeta({
     <!-- //조회 조건 설정-->
 
     <!-- 엑셀 업로드 add 24-07-17  -->
-    <div>
+    <div style="margin-top: 50px">
       <div class="area-contition">
         <table>
           <!-- Add 23-10-19 -->
@@ -239,11 +242,13 @@ definePageMeta({
             <col width="500px" />
           </colgroup>
           <!-- //Add 23-10-19 -->
-          <tbody><!-- Add 23-10-19 tbody -->
+          <tbody>
+            <!-- Add 23-10-19 tbody -->
             <tr>
               <th>업로드 파일</th>
               <td>
-                <label class="input-wrap" style="width: calc(100% - 110px)"><!-- Edit 23-10-19 -->
+                <label class="input-wrap" style="width: calc(100% - 110px)"
+                  ><!-- Edit 23-10-19 -->
                   <input type="text" :value="getFile" readonly />
                 </label>
                 <span class="file-upload">
