@@ -14,5 +14,6 @@ definePageMeta({
       <img src="@/assets/images/visual/complete_04.png" alt="" />
     </div>
     <p class="explain ac">잠시 후 mySUNI 서비스 화면으로 이동합니다.</p>
+    <AppFooter />
   </div>
 </template>
